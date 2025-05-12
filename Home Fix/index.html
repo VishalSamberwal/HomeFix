@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Fix - Find Trusted Service Providers</title>
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Inline CSS for Glassmorphism & Custom Styles -->
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom, rgba(31, 41, 47, 1) 0%, rgba(17, 24, 39, 1) 100%);
+    }
+
+    .backdrop-blur-md {
+      backdrop-filter: blur(10px);
+    }
+
+    /* Custom Tailwind Extension for Glassmorphism */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 1.5rem;
+      padding: 1.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .glass-btn {
+      backdrop-filter: blur(5px);
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 1.5rem;
+      padding: 0.75rem 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      color: #fff;
+      transition: background 0.3s ease;
+    }
+
+    .glass-btn:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .founder-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 1.5rem;
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+    }
+
+    .founder-card img {
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
+  </style>
+</head>
+
+<body class="text-white">
+
+  <!-- Navbar -->
+  <nav class="flex items-center justify-between p-6 shadow-md backdrop-blur-md bg-white bg-opacity-10">
+    <div class="text-2xl font-bold text-blue-400">Home Fix</div>
+    <div class="block lg:hidden">
+      <button onclick="toggleMenu()" class="relative z-50">
+        <img id="menu-open" src="Images/hamburger-menu.png" class="h-6 w-6">
+        <img id="menu-close" src="Images/close.png" class="h-6 w-6 hidden">
+      </button>
+    </div>
+    <div id="mobile-menu" class="w-full lg:flex lg:items-center lg:w-auto hidden lg:block mt-4 lg:mt-0">
+      <div class="text-sm lg:flex-grow text-center lg:text-left">
+        <a href="#features" class="block mt-4 lg:inline-block lg:mt-0 mx-2 text-white hover:text-blue-400 transition">Features</a>
+        <a href="#about" class="block mt-4 lg:inline-block lg:mt-0 mx-2 text-white hover:text-blue-400 transition">About</a>
+        <a href="#download" class="block mt-4 lg:inline-block lg:mt-0 mx-2 text-white hover:text-blue-400 transition">Download</a>
+        <a href="#contact" class="block mt-4 lg:inline-block lg:mt-0 mx-2 text-white hover:text-blue-400 transition">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-20 bg-gradient-to-b from-gray-900 to-gray-800">
+    <div class="max-w-lg text-center md:text-left">
+      <h1 class="text-4xl font-bold mb-6 leading-tight">Find Trusted <span class="text-blue-400">Plumbers, Electricians, Mechanics</span> & More</h1>
+      <p class="mb-6 text-lg text-gray-300">Home Fix connects you with verified service providers in your area with just a few taps. Fast, secure, and reliable.</p>
+      <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
+        <a href="HomeFix.apk" class="glass-btn">Download Now</a>
+        <a href="#features" class="glass-btn">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="px-6 md:px-16 py-20 bg-gradient-to-b from-gray-900 to-gray-800">
+    <h2 class="text-3xl font-bold text-center mb-12">App Features</h2>
+    <div class="grid gap-10 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+      <div class="glass-card">
+        <img src="Images/secure.png" class="mx-auto mb-4 w-20 h-20 object-contain">
+        <h3 class="font-bold text-xl mb-2">Verified Providers</h3>
+        <p class="text-gray-300">All service providers are background-checked for your safety and convenience.</p>
+      </div>
+      <div class="glass-card">
+        <img src="Images/booking.png" class="mx-auto mb-4 w-20 h-20 object-contain">
+        <h3 class="font-bold text-xl mb-2">Real-Time Booking</h3>
+        <p class="text-gray-300">Book services instantly and track your provider in real-time.</p>
+      </div>
+      <div class="glass-card">
+        <img src="Images/Payment.png" class="mx-auto mb-4 w-20 h-20 object-contain">
+        <h3 class="font-bold text-xl mb-2">Secure Payments</h3>
+        <p class="text-gray-300">Pay securely through the app via multiple payment options.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="px-6 md:px-16 py-20 bg-gradient-to-b from-gray-900 to-gray-800">
+    <h2 class="text-3xl font-bold text-center mb-8">About Us</h2>
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="mb-6 text-lg text-gray-300">Home Fix was founded by a passionate team of developers and entrepreneurs dedicated to simplifying home services. Our mission is to connect users with trusted, nearby service providers quickly and securely.</p>
+      <p class="mb-6 text-lg text-gray-300">Our goal is to make home maintenance stress-free, save you time, and ensure you always get high-quality service. Whether you need a plumber, an electrician, or a mechanic — Home Fix is your go-to solution.</p>
+
+      <!-- Founder and Co-Founder Cards -->
+      <div class="flex flex-col sm:flex-row justify-center items-center space-y-6 sm:space-y-0 sm:space-x-10 mt-10">
+        <div class="founder-card">
+          <img src="Images/Snapchat-2111077518.jpg" alt="Founder" class="mx-auto w-32 h-32 mb-4">
+          <p class="font-bold">Vishal Samberwal</p>
+          <p class="text-sm text-gray-400">Founder</p>
+        </div>
+        <div class="founder-card">
+          <img src="Images/Naveen Photo.jpeg" alt="Co-Founder" class="mx-auto w-32 h-32 mb-4">
+          <p class="font-bold">Naveen Sihag</p>
+          <p class="text-sm text-gray-400">Co-Founder</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="px-6 md:px-16 py-20 bg-gradient-to-b from-gray-900 to-gray-800">
+    <h2 class="text-3xl font-bold text-center mb-8">Contact & Support</h2>
+    <p class="text-center mb-4">Email us at :  homefixtoday2@gmail.com</p>
+    <p class="text-center mb-4">Instagram : <a href="https://www.instagram.com/homefix.today?igsh=cDNuaGkxbzI0NW9z" class="text-blue-400 hover:underline">homefix.today</a></p>
+    <p class="text-center text-gray-400">© 2025 Home Fix. All rights reserved.</p>
+  </section>
+
+  <!-- JS for Mobile Menu Toggle -->
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+      document.getElementById('menu-open').classList.toggle('hidden');
+      document.getElementById('menu-close').classList.toggle('hidden');
+    }
+  </script>
+
+</body>
+
+</html>

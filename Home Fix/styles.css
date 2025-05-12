@@ -1,0 +1,135 @@
+/* Mobile Menu Slide */
+#mobile-menu {
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    overflow: hidden;
+  }
+  
+  #mobile-menu.hidden {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+  #mobile-menu:not(.hidden) {
+    max-height: 500px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  /* Navbar Logo and Nav Links */
+  nav .text-2xl {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  nav a {
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+  
+  nav a:hover {
+    color: #60a5fa; /* blue-400 */
+    transform: scale(1.05);
+  }
+  
+  /* Navbar Button (Hamburger) */
+  button img,
+  button svg {
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+  }
+  
+  button img:hover,
+  button svg:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+  }
+  
+  /* Hero Section Image */
+  .hero-img {
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .hero-img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Features Icons */
+  .features-img {
+    border-radius: 9999px;
+    transition: transform 0.3s ease;
+  }
+  
+  .features-img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Headings Glow */
+  h1, h2, h3 {
+    transition: color 0.3s ease;
+  }
+  
+  h1:hover, h2:hover, h3:hover {
+    color: #60a5fa;
+  }
+  
+  /* Buttons Hover */
+  a.button-primary, a.button-secondary {
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  
+  a.button-primary:hover, a.button-secondary:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Section Padding */
+  section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  
+  /* Founder Images Hover */
+  .rounded-full:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+  }
+  
+  /* Responsive Utility */
+  
+  /* Small screens (phones) */
+  @media (max-width: 640px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .hero-img {
+      width: 100%;
+      max-width: 300px;
+    }
+  
+    #mobile-menu {
+      text-align: center;
+    }
+  }
+  
+  /* Medium screens (tablets) */
+  @media (min-width: 641px) and (max-width: 1024px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+  
+    .hero-img {
+      max-width: 350px;
+    }
+  }
+  
+  /* Large screens (desktop) */
+  @media (min-width: 1025px) {
+    h1 {
+      font-size: 3rem;
+    }
+  
+    .hero-img {
+      max-width: 400px;
+    }
+  }
+  
